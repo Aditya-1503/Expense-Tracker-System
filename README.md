@@ -58,9 +58,9 @@ Amount, StartDate, EndDate, PaymentMethod, RecurrencePattern)
 6. Savings (SavingID, UserID, BankName, AccountNumber, Amount, InterestRate)
 7. Income (IncomeID, UserID, Source, Amount, Date)
 8. Tags (TagID, TagName, Location, Date)
-We create a table for each of these strong entity sets.
+We create a table for each of these strong entity sets. </br>
 Step 2: Identify Weak Entities Sets:
-There are no weak entities in the ER model.
+There are no weak entities in the ER model. </br>
 Step 3: Reduce the Relationship Set by assigning valid primary keys:
 1. User-Transactions(TransactionID,UserID)
 2. User-Expenses(ExpenseID,UserID)
@@ -68,29 +68,25 @@ Step 3: Reduce the Relationship Set by assigning valid primary keys:
 4. Tag-Transactions(TransactionID,TagID)
 5. User-Income(IncomeID,UserID)
 6. User-Investments(InvestmentID,UserID)
-7. User-Savings(SavingID,UserID)
-Step 4: Remove Redundant Schemas: There are redundant schemas.
-Step 5: Merge the Schemas: The relationship sets get merged with the many end of their respective tables except the TransactionTags relationship set as it is a many-to-many relationship.
-Final Schema :
+7. User-Savings(SavingID,UserID) </br>
+Step 4: Remove Redundant Schemas: There are redundant schemas.</br>
+Step 5: Merge the Schemas: The relationship sets get merged with the many end of their respective tables except the TransactionTags relationship set as it is a many-to-many relationship.</br>
+Final Schema :</br>
 1. User (UserID, Username, Password, Name, Email, Phone, Address)
-2. Transactions (TransactionID, UserID, TransactionType, Description, Amount, Date,
-PaymentMethod)
-3. Investments (InvestmentID, UserID, InvestmentName, InvestmentType, Amount,
-ReturnRate, StartDate, EndDate)
+2. Transactions (TransactionID, UserID, TransactionType, Description, Amount, Date, PaymentMethod)
+3. Investments (InvestmentID, UserID, InvestmentName, InvestmentType, Amount, ReturnRate, StartDate, EndDate)
 4. Expenses (ExpenseID, UserID, Category, Amount, Date, TagID)
-5. RecurringTransactions (RecurringTransactionID, UserID, TransactionType, Description,
-Amount, StartDate, EndDate, PaymentMethod, RecurrencePattern)
+5. RecurringTransactions (RecurringTransactionID, UserID, TransactionType, Description, Amount, StartDate, EndDate, PaymentMethod, RecurrencePattern)
 6. Savings (SavingID, UserID, BankName, AccountNumber, Amount, InterestRate)
 7. Income (IncomeID, UserID, Source, Amount, Date)
 8. Tags (TagID, TagName, Location, Date)
 9. TransactionTags (TransactionID, TagID)
 
 ### 3.3 : Normalisation
-Step 1: Remove Redundant Data
-- The schema already appears to be in a relatively normalized form, as each table seems to
-represent a distinct entity or relationship.
-- No redundant data seems present.
-Step 2: Identify Functional Dependencies:
+Step 1: Remove Redundant Data </br>
+- The schema already appears to be in a relatively normalized form, as each table seems to represent a distinct entity or relationship.
+- No redundant data seems present.</br>
+Step 2: Identify Functional Dependencies: </br>
 1. User: UserID -> Username, Password, Name, Email, Phone, Address
 2. Transactions: TransactionID -> UserID, TransactionType, Description, Amount, Date, PaymentMethod
 3. Investments: InvestmentID -> UserID, InvestmentName, InvestmentType, Amount, ReturnRate, StartDate, EndDate
@@ -99,11 +95,11 @@ Step 2: Identify Functional Dependencies:
 6. Savings: SavingID -> UserID, BankName, AccountNumber, Amount, InterestRate
 7. Income: IncomeID -> UserID, Source, Amount, Date
 8. Tags: TagID -> TagName, Location, Date
-9. TransactionTags: (TransactionID, TagID)
+9. TransactionTags: (TransactionID, TagID) </br>
     
-Step 3: Group Attributes into Tables:
+Step 3: Group Attributes into Tables: </br>
 - Based on the identified dependencies, the schema appears to be already grouped into tables effectively.
-No further normalization steps are necessary.
+No further normalization steps are necessary. </br>
 
 ### 3.4 : PL/SQL
 - Procedures, If-Else, Exception Handling</br></br>
