@@ -140,13 +140,14 @@ platform to track income, expenses, investments, and savings, our system aims to
 users with the tools and insights needed to make informed financial decisions. Through
 effective financial management, users can enhance their financial literacy, achieve their
 financial goals, and ultimately strive towards greater financial stability and well-being.
-CHAPTER 6: LIMITATIONS & FUTURE WORK
-Limitations:
+
+## CHAPTER 6: LIMITATIONS & FUTURE WORK
+### Limitations:
 One limitation is the reliance on accurate and timely data input from users, which may be
 subject to errors or omissions. Additionally, the system's effectiveness may be influenced by
 external factors such as market volatility(affectiing the investments of the user) or economic
 conditions, which are beyond its control.
-Future Work:
+### Future Work:
 One area for future work is the integration of machine learning algorithms to provide more
 personalized financial insights and recommendations to users. Additionally, expanding the
 system's functionality to include features such as goal-based savings planning, debt
