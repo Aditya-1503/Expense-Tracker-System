@@ -46,7 +46,7 @@ system will provide tools and guidance to help users stay on track.
 ![image](https://github.com/Aditya-1503/ExpenseTracker/assets/63710968/29f07d8e-c801-4bc7-8e7e-87cfcbac6c8a)
 
 ### 3.2 : Schema Conversion
-Step 1: Identifying Strong Entity Sets:
+#### Step 1: Identifying Strong Entity Sets:
 1. User (UserID, Username, Password, Name, Email, Phone, Address)
 2. Transactions (TransactionID, UserID, TransactionType, Description, Amount, Date,
 PaymentMethod)
@@ -59,9 +59,8 @@ Amount, StartDate, EndDate, PaymentMethod, RecurrencePattern)
 7. Income (IncomeID, UserID, Source, Amount, Date)
 8. Tags (TagID, TagName, Location, Date)
 We create a table for each of these strong entity sets. </br>
-Step 2: Identify Weak Entities Sets:
-There are no weak entities in the ER model. </br>
-Step 3: Reduce the Relationship Set by assigning valid primary keys:
+#### Step 2: Identify Weak Entities Sets: The ER model has no weak entities. </br>
+#### Step 3: Reduce the Relationship Set by assigning valid primary keys:
 1. User-Transactions(TransactionID,UserID)
 2. User-Expenses(ExpenseID,UserID)
 3. User-RecurringTransactions(RecurringTransactionsID,UserID)
@@ -69,9 +68,9 @@ Step 3: Reduce the Relationship Set by assigning valid primary keys:
 5. User-Income(IncomeID,UserID)
 6. User-Investments(InvestmentID,UserID)
 7. User-Savings(SavingID,UserID) </br>
-Step 4: Remove Redundant Schemas: There are redundant schemas.</br>
-Step 5: Merge the Schemas: The relationship sets get merged with the many end of their respective tables except the TransactionTags relationship set as it is a many-to-many relationship.</br>
-Final Schema :</br>
+#### Step 4: Remove Redundant Schemas: There are redundant schemas.</br>
+#### Step 5: Merge the Schemas: The relationship sets get merged with the many end of their respective tables except the TransactionTags relationship set as it is a many-to-many relationship.</br>
+#### Final Schema :</br>
 1. User (UserID, Username, Password, Name, Email, Phone, Address)
 2. Transactions (TransactionID, UserID, TransactionType, Description, Amount, Date, PaymentMethod)
 3. Investments (InvestmentID, UserID, InvestmentName, InvestmentType, Amount, ReturnRate, StartDate, EndDate)
@@ -83,10 +82,10 @@ Final Schema :</br>
 9. TransactionTags (TransactionID, TagID)
 
 ### 3.3 : Normalisation
-Step 1: Remove Redundant Data </br>
+#### Step 1: Remove Redundant Data </br>
 - The schema already appears to be in a relatively normalized form, as each table seems to represent a distinct entity or relationship.
 - No redundant data seems present.</br>
-Step 2: Identify Functional Dependencies: </br>
+#### Step 2: Identify Functional Dependencies: </br>
 1. User: UserID -> Username, Password, Name, Email, Phone, Address
 2. Transactions: TransactionID -> UserID, TransactionType, Description, Amount, Date, PaymentMethod
 3. Investments: InvestmentID -> UserID, InvestmentName, InvestmentType, Amount, ReturnRate, StartDate, EndDate
@@ -97,7 +96,7 @@ Step 2: Identify Functional Dependencies: </br>
 8. Tags: TagID -> TagName, Location, Date
 9. TransactionTags: (TransactionID, TagID) </br>
     
-Step 3: Group Attributes into Tables: </br>
+#### Step 3: Group Attributes into Tables: </br>
 - Based on the identified dependencies, the schema appears to be already grouped into tables effectively.
 No further normalization steps are necessary. </br>
 
